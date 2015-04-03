@@ -1,5 +1,6 @@
 package interfaces.view;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -29,7 +30,6 @@ public class InterfacePanel extends JPanel
 		rageQuitter = new JButton("Rage Quit!");
 		emptyButton = new JButton("Empty Wallet");
 		
-		
 		setupPane();
 		setupPanel();
 		setupLayout();
@@ -43,7 +43,15 @@ public class InterfacePanel extends JPanel
 	
 	private void setupPanel()
 	{
-		
+		this.setLayout(baseLayout);
+		this.setBackground(Color.YELLOW);
+		this.setSize(700, 400);
+		this.add(addGameButton);
+		this.add(installButton);
+		this.add(startButton);
+		this.add(stopButton);
+		this.add(rageQuitter);
+		this.add(emptyButton);
 	}
 	
 	private void setupLayout()
